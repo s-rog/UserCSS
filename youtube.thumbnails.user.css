@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name           YouTube Dim Thumbnails
+@namespace      github.com/s-rog/UserCSS
+@version        0.0.1
+@description    Dim Youtube thumbnails
+@updateURL      https://raw.githubusercontent.com/s-rog/UserCSS/master/youtube.thumbnails.user.css
+@license        CC-BY-SA-4.0
+@author         s-rog
+@preprocessor stylus
+@var range _Brightness "Brightness" [0.5, 0, 1, 0.1]
+==/UserStyle== */
+@-moz-document url-prefix("https://www.youtube.com/") {
+    a#thumbnail {
+        filter: brightness(_Brightness) !important;
+    }
+
+    .ytp-endscreen-content {
+        filter: brightness(_Brightness) !important;
+    }
+}
