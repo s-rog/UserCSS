@@ -1,0 +1,25 @@
+/* ==UserStyle==
+@name           Startpage Better Ads
+@namespace      github.com/s-rog/UserCSS
+@version        0.0.1
+@description    Move Startpage ads to the right
+@updateURL      https://raw.githubusercontent.com/s-rog/UserCSS/master/startpage.ads.user.css
+@license        CC-BY-SA-4.0
+@author         s-rog
+@preprocessor stylus
+@var range _Right "Right" [5, 0, 50, 5, "vw"]
+@var range _Width "Width" [20, 0, 50, 5, "vw"]
+@var range _Opacity "Opacity" [0.7, 0, 1, 0.1]
+==/UserStyle== */
+@-moz-document url-prefix("https://www.startpage.com/do/"),
+url-prefix("https://www.startpage.com/sp/") {
+    .a-gl-tp--desktop.a-gl-tp {
+        position: absolute;
+        right: _Right;
+        width: _Width;
+        opacity: _Opacity;
+    }
+    .w-gl__label {
+        display: none;
+    }
+}
